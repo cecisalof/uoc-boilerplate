@@ -1,12 +1,22 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$font-family-sans-serif: 'Orbitron', sans-serif;
+$font-family-serif: "Roboto Slab", serif;;
+
+
+// $uoc-corporate: #000078;
+// $uoc-masterbrand: #73edff;
+// $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$color-bg: #0f0f0f;
+$color-text: #ffffff;
+$color-primary: #00ffff;
+$color-secondary: #ff00ff;
+$color-border: #00ff99;
+// Ajustar opacidad de gradientes!!
+$color-bg--linear-primary: linear-gradient(90deg, rgb(46, 34, 46) 55%, rgba(255, 0, 255, 1) 100%);
+$color-bg--linear-secondary: linear-gradient(180deg, rgb(133, 243, 241, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%);
 
 $mqMinWidth: 420px;

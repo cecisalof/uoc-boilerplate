@@ -15,8 +15,8 @@ $color-text: #ffffff;
 $color-primary: #00ffff;
 $color-secondary: #ff00ff;
 $color-border: #00ff99;
-// Ajustar opacidad de gradientes!!
+
 $color-bg--linear-primary: linear-gradient(90deg, rgb(239, 47, 212) 0%, rgb(46, 34, 46) 30%);
 $color-bg--linear-secondary: linear-gradient(180deg, rgb(0, 255, 255, 0.5) 100%, rgb(0, 0, 0) 100%); 
 
-$mqMinWidth: 420px;
+$mq-min-width: 420px;

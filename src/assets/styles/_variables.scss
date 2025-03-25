@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  # SETTINGS (Variables)
+\*------------------------------------*/
+
 @use "sass:color";
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
@@ -6,10 +10,6 @@
 $font-family-sans-serif: 'Orbitron', sans-serif;
 $font-family-serif: "Roboto Slab", serif;;
 
-
-// $uoc-corporate: #000078;
-// $uoc-masterbrand: #73edff;
-// $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 $color-bg: #0f0f0f;
 $color-text: #ffffff;
 $color-primary: #00ffff;

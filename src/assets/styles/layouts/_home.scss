@@ -1,138 +1,32 @@
-* {
-  box-sizing: border-box;
-}
+/*------------------------------------*\
+  # LAYOUT
+\*------------------------------------*/
 
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   height: 100vh;
-//   margin: 0;
-//   padding: 2rem;
-//   font-family: $font-family-sans-serif;
-//   font-size: 16px;
-//   line-height: 24px;
-//   background-color: $color-bg--linear-primary;
-//   // color: $uoc-corporate;
-// }
-
-// .uoc-container {
-//   max-width: 800px;
-//   margin: auto;
-//   padding: 2rem;
-//   border-radius: 2rem;
-//   text-align: center;
-//   background-color: #fff;
-//   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-//     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-// }
-
-// .uoc-logo {
-//   display: block;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-bottom: 1.5rem;
-//   max-width: 200px;
-//   height: auto;
-
-//   @media (min-width: $mq-min-width) {
-//     max-width: none;
-//   }
-// }
-
-// .uoc-title {
-//   font-family: $font-family-serif;
-//   font-size: 24px;
-//   font-weight: 700;
-//   // color: $uoc-corporate;
-
-//   @media (min-width: $mq-min-width) {
-//     font-size: 36px;
-//   }
-// }
-
-// .uoc-footer {
-//   margin-top: 1.5rem;
-//   font-size: 0.75rem;
-//   text-align: center;
-// }
-
-/* Estilos generales */
 body {
-  margin: 0;
-  padding: 0;
   background: $color-bg--linear-primary, $color-bg--linear-secondary;
-  color: #ffffff;
-  font-family: 'Orbitron', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden;
-  position: relative;
 }
 
-/* Contenedor principal */
 .container {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #00ff99;
-  box-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99 inset;
-  border-radius: 20px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+}
 
-  @media (min-width: 500) {
+@media (min-width: 768px) {
+  .container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    gap: 20px;
-    width: 90%;
-    max-width: 1200px;
+    place-items: center; /* Centra tanto horizontal como verticalmente */
+    min-height: 100vh;
   }
 }
 
-/* Columna izquierda: imagen y título */
-.left-column {
-  text-align: center;
-}
+// .header {
+//   padding: 16px; /* Ajuste para móviles */
 
-.left-column h1 {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-.left-column img {
-  width: 100%;
-  border-radius: 10px;
-  border: 2px solid #00ff99;
-  box-shadow: 0 0 15px #00ff99;
-}
-
-/* Columna derecha: ingredientes y receta */
-.right-column {
-  padding: 20px;
-}
-
-.right-column h2 {
-  color: #ff00ff;
-  text-shadow: 0 0 10px #ff00ff;
-}
-
-.right-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.right-column ul li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.right-column ul li::before {
-  content: "➤";
-  position: absolute;
-  left: 0;
-  color: #00ff99;
-}
+//   &__title {
+//     @include neon-shadow($color-primary);
+//   }
+// }
 
 /* Fondo con cuadrícula futurista */
 body::before {
@@ -152,9 +46,34 @@ body::before {
   transform: perspective(400px) rotateX(50deg); /* Efecto de profundidad */
 }
 
-/* Efecto de neón en hover */
-.container:hover {
-  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff inset;
-  transform: scale(1.02);
-  transition: 0.3s;
+
+/*------------------------------------*\
+  # RESPONSIVE DESIGN
+\*------------------------------------*/
+@media (min-width: 768px) {
+  .recipe {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .recipe__image-container,
+  .recipe__content {
+    width: 48%;
+  }
+
+  // .header {
+  //   padding: 24px;
+  // }
 }
+
+@media (min-width: 1200px) {
+  .recipe {
+    max-width: 900px;
+  }
+}
+
+
+

@@ -1,0 +1,58 @@
+/*------------------------------------*\
+  # COMPONENTS
+\*------------------------------------*/
+.recipe {
+    // background: rgba(255, 255, 255, 0.05);
+    @include border-glow();
+    border-radius: 20px;
+    padding: 16px;
+    transition: transform 0.3s ease;
+    width: 100%; /* Mobile First */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  
+    &__image-container {
+      width: 100%;
+    }
+  
+    &__image {
+      width: 100%;
+      border-bottom: 2px solid $color-border;
+    }
+  
+    &__content {
+      width: 100%;
+      text-align: left;
+    }
+  
+    &_intro {
+      font-family: $font-family-serif;
+
+    }
+    &__title {
+      @include neon-shadow();
+      // font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+  
+    &__list,
+    &__steps {
+      font-family: $font-family-serif;
+      list-style: none;
+      padding: 0;
+    }
+  
+    &__item,
+    &__step {
+      font-size: 1rem;
+      color: $color-text;
+      margin-bottom: 8px;
+    }
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  

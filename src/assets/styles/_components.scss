@@ -2,7 +2,6 @@
   # COMPONENTS
 \*------------------------------------*/
 .recipe {
-    // background: rgba(255, 255, 255, 0.05);
     @include border-glow();
     border-radius: 20px;
     padding: 16px;
@@ -29,12 +28,13 @@
   
     &_intro {
       font-family: $font-family-serif;
-
+      padding: 16px 0;
     }
+
     &__title {
       @include neon-shadow();
-      // font-size: 1.8rem;
       margin-bottom: 8px;
+      text-align: center;
     }
   
     &__list,
@@ -46,7 +46,7 @@
   
     &__item,
     &__step {
-      font-size: 1rem;
+      font-size: 1rem; /*REVISAR SI ES NECESARIO O QUITAR*/
       color: $color-text;
       margin-bottom: 8px;
     }

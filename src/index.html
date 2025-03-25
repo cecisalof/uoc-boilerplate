@@ -1,38 +1,64 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-  <title>UOC Boilerplate</title>
+  <title>Chilaquiles Mexicanos</title>
 </head>
 
 <body>
+  <!-- <header class="header">
+    <h1 class="header__title">Chilaquiles Mexicanos</h1>
+  </header> -->
 
-  <body>
-    <div class="container">
-      <div class="left-column">
-        <h1>CHILAQUILES MEXICANOS</h1>
-        <img src="./assets//images/chilaquiles-verdes-sf.png" alt="Chilaquiles Mexicanos">
+  <main class="container">
+    <section class="recipe">
+      <div class="recipe__header">
+        <div class="recipe__title">
+          <h1 class="header__title">Chilaquiles Verdes</h1>
+        </div>
+        <div class="recipe__image-container">
+          <img class="recipe__image" src="./assets/images/chilaquiles-verdes-sf.png" alt="Chilaquiles Mexicanos">
+        </div>
       </div>
-      <div class="right-column">
-        <h2>INGREDIENTES</h2>
-        <ul>
-          <li>Tortillas de maíz</li>
-          <li>Salsa roja o verde</li>
-          <li>Queso fresco</li>
-          <li>Crema</li>
-          <li>Pollo deshebrado (opcional)</li>
-          <li>Cilantro y cebolla</li>
+
+      <div class="recipe__content">
+        <p class="recipe_intro">Los chilaquiles mexicanos son un platillo tradicional hecho con totopos (trozos de tortilla fritos o tostados) bañados en salsa verde (o roja), acompañados de queso, crema, cebolla y a veces huevo, pollo o carne.</p>
+        <h2 class="recipe__title">Ingredientes</h2>
+        <h3 class="recipe__title">Para Chilaquiles</h3>
+        <ul class="recipe__list">
+          <li class="recipe__item">Tortillas de maíz</li>
+          <li class="recipe__item">Aceite vegetal (para freír)</li>
+          <li class="recipe__item">Salsa verde</li>
+          <li class="recipe__item">Queso fresco o queso rallado</li>
+          <li class="recipe__item">Crema</li>
+          <li class="recipe__item">Pechugas de pollo cocidas y deshebradas (opcional)</li>
+          <li class="recipe__item">Cebolla en rodajas finas</li>
         </ul>
-        <h2>RECETA</h2>
-        <p>1. Corta las tortillas en triángulos y fríelas hasta que estén doradas.</p>
-        <p>2. Agrega la salsa caliente y mezcla bien.</p>
-        <p>3. Sirve con queso, crema, pollo y otros ingredientes al gusto.</p>
+        <h3 class="recipe__title">Para la salsa verde</h3>
+        <ul class="recipe__list">
+          <li class="recipe__item">Tomates verdes (tomatillos)</li>
+          <li class="recipe__item">Chiles serranos o jalapeños (ajusta al gusto)</li>
+          <li class="recipe__item">Cebolla</li>
+          <li class="recipe__item">Ajo</li>
+          <li class="recipe__item">Cilantro fresco</li>
+          <li class="recipe__item">Caldo de pollo (o agua)</li>
+          <li class="recipe__item">Sal al gusto</li>
+        </ul>
+
+        <h2 class="recipe__title">Receta</h2>
+        <ol class="recipe__steps">
+          <li class="recipe__step">Corta las tortillas en triángulos y fríelas hasta que estén doradas.</li>
+          <li class="recipe__step">Agrega la salsa caliente y mezcla bien.</li>
+          <li class="recipe__step">Sirve con queso, crema, pollo y otros ingredientes al gusto.</li>
+        </ol>
       </div>
-    </div>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>

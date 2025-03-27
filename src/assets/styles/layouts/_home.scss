@@ -7,18 +7,21 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  display: flex;
   margin: auto;
   padding: 16px;
+
+  @media (min-width: 768px) {
+      display: grid;
+      // grid-template-columns: 1fr 1fr;
+      place-items: center;
+      gap: 20px;
+      max-width: 1400px;
+      padding: 3rem;
+    }
 }
 
-@media (min-width: 768px) {
-  .container {
-    display: grid;
-    place-items: center; /* Centra tanto horizontal como verticalmente */
-    min-height: 100vh;
-  }
-}
+
 
 // .header {
 //   padding: 16px; /* Ajuste para móviles */
@@ -45,35 +48,3 @@ body::before {
   z-index: -1;
   transform: perspective(400px) rotateX(50deg); /* Efecto de profundidad */
 }
-
-
-/*------------------------------------*\
-  # RESPONSIVE DESIGN
-\*------------------------------------*/
-@media (min-width: 768px) {
-  .recipe {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .recipe__image-container,
-  .recipe__content {
-    width: 48%;
-  }
-
-  // .header {
-  //   padding: 24px;
-  // }
-}
-
-@media (min-width: 1200px) {
-  .recipe {
-    max-width: 900px;
-  }
-}
-
-
-

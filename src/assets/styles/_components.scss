@@ -20,12 +20,12 @@
 
   &__image-container {
     width: 100%;
-    border-bottom: 2px solid $color-border;
     margin-top: 2rem;
   }
 
   &__image {
     width: 70%;
+    border-bottom: 2px solid $color-border;
   }
 
   &__content {

@@ -9,29 +9,24 @@
 </head>
 
 <body>
-  <!-- <header class="header">
-    <h1 class="header__title">Chilaquiles Mexicanos</h1>
-  </header> -->
-
   <main class="container">
     <section class="recipe">
       <div class="recipe__header">
-        <div class="recipe__title">
-          <h1 class="header__title">Chilaquiles Verdes</h1>
+        <div class="recipe__main-title">
+          <h1 class="recipe__main-title">Chilaquiles Verdes</h1>
         </div>
         <div class="recipe__image-container">
           <img class="recipe__image" src="./assets/images/chilaquiles-verdes-sf.png" alt="Chilaquiles Mexicanos">
         </div>
       </div>
-
-      <div class="recipe__content">
-        <div class="recipe_intro">
-          <p class="recipe_intro--content">Los chilaquiles mexicanos son un platillo tradicional hecho con totopos (trozos de
-            tortilla fritos o tostados) bañados en salsa verde (o roja), acompañados de queso, crema, cebolla y a veces
-            huevo, pollo o carne.</p>
-        </div>
+      <div class="recipe__content recipe__content--intro">
+        <p>Los chilaquiles mexicanos son un platillo tradicional hecho con totopos (trozos de
+          tortilla fritos o tostados) bañados en salsa verde (o roja), acompañados de queso, crema, cebolla y a veces
+          huevo, pollo o carne.</p>
+      </div>
+      <div class="recipe__content recipe__content--ingredients">
         <h2 class="recipe__title">Ingredientes</h2>
-        <h4 class="recipe__title--subtitle">Para Chilaquiles</h4>
+        <h3 class="recipe__title--subtitle">Para Chilaquiles</h3>
         <ul class="recipe__list">
           <li class="recipe__item">Tortillas de maíz</li>
           <li class="recipe__item">Aceite vegetal (para freír)</li>
@@ -41,7 +36,7 @@
           <li class="recipe__item">Pechugas de pollo cocidas y deshebradas (opcional)</li>
           <li class="recipe__item">Cebolla en rodajas finas</li>
         </ul>
-        <h4 class="recipe__title--subtitle">Para la salsa verde</h4>
+        <h3 class="recipe__title--subtitle">Para la salsa verde</h3>
         <ul class="recipe__list">
           <li class="recipe__item">Tomates verdes (tomatillos)</li>
           <li class="recipe__item">Chiles serranos o jalapeños (ajusta al gusto)</li>
@@ -51,24 +46,27 @@
           <li class="recipe__item">Caldo de pollo (o agua)</li>
           <li class="recipe__item">Sal al gusto</li>
         </ul>
-
-        <h2 class="recipe__title">Receta</h2>
-        <div>
-          <h4 class="recipe__title--subtitle">Preparación de la salsa</h4>
-          <ol class="recipe__steps">
-            <li class="recipe__step">Hierve los tomates verdes y los chiles en agua durante 5-7 minutos hasta que cambien de color.</li>
-            <li class="recipe__step">Escurre y licúa con la cebolla, ajo, cilantro y el caldo hasta obtener una mezcla homogénea.</li>
-            <li class="recipe__step">En una sartén con un poco de aceite caliente, sofríe la salsa durante 5 minutos. Ajusta la sal.</li>
-          </ol>
+      </div>
+      <div class="recipe__content recipe__content--steps">
+        <div class="recipe__content--steps__title">
+          <h2 class="recipe__title">Receta</h2>
         </div>
-        <div>
-          <h4 class="recipe__title--subtitle">Preparación del plato</h4>
-          <ol class="recipe__steps">
-            <li class="recipe__step">Corta las tortillas en triángulos y fríelas en aceite caliente hasta que estén doradas y crujientes. Escúrrelas en papel absorbente.</li>
-            <li class="recipe__step">En una sartén grande, calienta la salsa (verde o roja) y añade los totopos. Mezcla bien para que se impregnen, pero sin dejarlos remojar demasiado.</li>
-            <li class="recipe__step">Sirve en platos y decora con crema, queso, cebolla y, si deseas, pollo deshebrado o huevo frito.</li>
-          </ol>
-        </div>
+         <div class="recipe__content--steps__sauce">
+           <h3 class="recipe__title--subtitle">Preparación de la salsa</h3>
+           <ol class="recipe__steps">
+             <li class="recipe__step">Hierve los tomates verdes y los chiles en agua durante 5-7 minutos hasta que cambien de color.</li>
+             <li class="recipe__step">Escurre y licúa con la cebolla, ajo, cilantro y el caldo hasta obtener una mezcla homogénea.</li>
+             <li class="recipe__step">En una sartén con un poco de aceite caliente, sofríe la salsa durante 5 minutos. Ajusta la sal.</li>
+           </ol>
+         </div>
+         <div class="recipe__content--steps__chilaquiles">
+           <h3 class="recipe__title--subtitle">Preparación del plato</h3>
+           <ol class="recipe__steps">
+             <li class="recipe__step">Corta las tortillas en triángulos y fríelas en aceite caliente hasta que estén doradas y crujientes. Escúrrelas en papel absorbente.</li>
+             <li class="recipe__step">En una sartén grande, calienta la salsa (verde o roja) y añade los totopos. Mezcla bien para que se impregnen, pero sin dejarlos remojar demasiado.</li>
+             <li class="recipe__step">Sirve en platos y decora con crema, queso, cebolla y, si deseas, pollo deshebrado o huevo frito.</li>
+           </ol>
+         </div>
       </div>
     </section>
   </main>

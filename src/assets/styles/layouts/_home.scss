@@ -17,19 +17,12 @@ body {
       place-items: center;
       gap: 20px;
       max-width: 1400px;
+    }
+  
+    @media (min-width: 1200px) {
       padding: 3rem;
     }
 }
-
-
-
-// .header {
-//   padding: 16px; /* Ajuste para móviles */
-
-//   &__title {
-//     @include neon-shadow($color-primary);
-//   }
-// }
 
 /* Fondo con cuadrícula futurista */
 body::before {

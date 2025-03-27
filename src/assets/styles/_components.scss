@@ -26,7 +26,6 @@
 
   &__image {
     width: 70%;
-
   }
 
   &__content {
@@ -37,13 +36,10 @@
 
   &__content--intro {
     font-family: $font-family-serif;
-    padding: 0.5rem;
   }
 
   &__title {
     margin-bottom: 0.5rem;
-    // text-align: center;
-    // text-transform: uppercase;
   }
 
   &__title--subtitle {
@@ -75,55 +71,70 @@
     transform: scale(1.05);
   }
 
-// /*------------------------------------*\
-//   # RESPONSIVE DESIGN
-// \*------------------------------------*/
+  // /*------------------------------------*\
+  //   # RESPONSIVE DESIGN
+  // \*------------------------------------*/
   @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header       ingredients"
+      "intro        ingredients"
+      "steps        steps";
+    gap: 1.5rem;
+
+    &__header {
+      grid-area: header;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__content {
+      padding: 0 1.5rem;
+    }
+
+    &__content--intro {
+      grid-area: intro;
+    }
+
+    &__content--ingredients {
+      grid-area: ingredients;
+    }
+
+    &__content--steps {
+      grid-area: steps;
+      margin: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
-        "header       ingredients"
-        "intro        ingredients"
-        "steps        steps";
+        "title       title"
+        "sauce       chilaquiles";
       gap: 1.5rem;
-  
-      &__header {
-        grid-area: header;
-      }
-  
-      &__content{
-        padding: 1.5rem;
+
+      &__title {
+        grid-area: title;
+        text-align: center;
       }
 
-      &__content--intro {
-        grid-area: intro;
+      &__sauce {
+        grid-area: sauce;
       }
-  
-      &__content--ingredients {
-        grid-area: ingredients;
-      }
-  
-      &__content--steps {
-        grid-area: steps;
-        margin: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-          "title       title"
-          "sauce       chilaquiles";
-        gap: 1.5rem;
 
-        &__title {
-          grid-area: title;
-          text-align: center;
-        }
-        &__sauce {
-          grid-area: sauce;
-        }
-
-        &__chilaquiles {
-          grid-area: chilaquiles;
-        }
+      &__chilaquiles {
+        grid-area: chilaquiles;
       }
     }
+  }
+
+  @media (min-width: 1200px) {
+    &__image {
+      width: 70%;
+    }
+
+    &__content {
+      padding: 0 2rem;
+    }
+  }
 }

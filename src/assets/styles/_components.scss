@@ -72,7 +72,7 @@
   // \*------------------------------------*/
   @media (min-width: 768px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     grid-template-areas:
       "header       ingredients"
       "intro        ingredients"
@@ -125,8 +125,10 @@
   }
 
   @media (min-width: 1200px) {
+    grid-template-columns: 1.5fr 1fr;
+
     &__image {
-      width: 70%;
+      width: 60%;
     }
 
     &__content {

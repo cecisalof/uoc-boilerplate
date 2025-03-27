@@ -2,57 +2,128 @@
   # COMPONENTS
 \*------------------------------------*/
 .recipe {
-    @include border-glow();
-    border-radius: 20px;
-    padding: 16px;
-    transition: transform 0.3s ease;
-    width: 100%; /* Mobile First */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  
-    &__image-container {
-      width: 100%;
-    }
-  
-    &__image {
-      width: 100%;
-      border-bottom: 2px solid $color-border;
-    }
-  
-    &__content {
-      width: 100%;
-      text-align: left;
-    }
-  
-    &_intro {
-      font-family: $font-family-serif;
-      padding: 16px 0;
-    }
+  @include border-glow();
+  border-radius: 20px;
+  padding: 16px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  /* Mobile First */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 
-    &__title {
-      @include neon-shadow();
-      margin-bottom: 8px;
-      text-align: center;
-    }
-  
-    &__list,
-    &__steps {
-      font-family: $font-family-serif;
-      list-style: none;
-      padding: 0;
-    }
-  
-    &__item,
-    &__step {
-      font-size: 1rem; /*REVISAR SI ES NECESARIO O QUITAR*/
-      color: $color-text;
-      margin-bottom: 8px;
-    }
-  
-    &:hover {
-      transform: scale(1.05);
-    }
+  &__main-title,
+  &__title {
+    @include neon-shadow();
   }
+
+  &__image-container {
+    width: 100%;
+    border-bottom: 2px solid $color-border;
+    margin-top: 2rem;
+  }
+
+  &__image {
+    width: 70%;
+
+  }
+
+  &__content {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+  }
+
+  &__content--intro {
+    font-family: $font-family-serif;
+    padding: 0.5rem;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    // text-align: center;
+    // text-transform: uppercase;
+  }
+
+  &__title--subtitle {
+    font-size: 1.125rem;
+    color: $color-secondary;
+    font-family: $font-family-serif;
+    font-weight: 500;
+    padding: 0.5rem;
+  }
+
+  &__content--steps {
+    margin: 1.5rem 0;
+  }
+
+  &__list,
+  &__steps {
+    font-family: $font-family-serif;
+    font-size: var(--font-size-base);
+    font-weight: 300;
+    // list-style: none;
+  }
+
+  &__item,
+  &__step {
+    margin: 0.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+// /*------------------------------------*\
+//   # RESPONSIVE DESIGN
+// \*------------------------------------*/
+  @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "header       ingredients"
+        "intro        ingredients"
+        "steps        steps";
+      gap: 1.5rem;
   
+      &__header {
+        grid-area: header;
+      }
+  
+      &__content{
+        padding: 1.5rem;
+      }
+
+      &__content--intro {
+        grid-area: intro;
+      }
+  
+      &__content--ingredients {
+        grid-area: ingredients;
+      }
+  
+      &__content--steps {
+        grid-area: steps;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "title       title"
+          "sauce       chilaquiles";
+        gap: 1.5rem;
+
+        &__title {
+          grid-area: title;
+          text-align: center;
+        }
+        &__sauce {
+          grid-area: sauce;
+        }
+
+        &__chilaquiles {
+          grid-area: chilaquiles;
+        }
+      }
+    }
+}

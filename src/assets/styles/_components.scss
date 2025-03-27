@@ -67,6 +67,14 @@
     margin: 0.5rem;
   }
 
+  &__content--steps__images {
+    display: flex;
+  }
+
+  &__steps__images {
+    width: 100%;
+  }
+
   // /*------------------------------------*\
   //   # RESPONSIVE DESIGN
   // \*------------------------------------*/
@@ -106,8 +114,17 @@
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
         "title       title"
-        "sauce       chilaquiles";
+        "sauce       chilaquiles"
+        "img-sauce   img-chilaquiles";
       gap: 1.5rem;
+
+      &__images--saouce {
+        grid-area: img-sauce;
+      }
+
+      &__images--chilaquiles {
+        grid-area: img-chilaquilas;
+      }
 
       &__title {
         grid-area: title;

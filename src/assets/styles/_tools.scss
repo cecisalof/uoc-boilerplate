@@ -12,6 +12,6 @@
 }
 
 // Función para ajustar opacidad
-@function adjust-opacity($color, $opacity) {
-  @return rgba($color, $opacity);
+@function adjust-opacity($opacity) {
+  @return ($opacity);
 }

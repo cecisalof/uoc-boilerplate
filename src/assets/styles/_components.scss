@@ -13,6 +13,10 @@
   align-items: center;
   gap: 16px;
 
+  &:hover {
+    border: adjust-opacity(0.6); // 60% opacidad en hover
+  }
+
   &__main-title,
   &__title {
     @include neon-shadow();

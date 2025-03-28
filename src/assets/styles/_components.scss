@@ -59,8 +59,20 @@
     font-family: $font-family-serif;
     font-size: var(--font-size-base);
     font-weight: 300;
-    // list-style: none;
   }
+
+  &__list {
+    list-style: none; /* Quita los bullets predeterminados */
+    padding-left: 0;
+  }
+
+  &__item::before {
+    content: "\f816";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    color: $color-secondary;
+    margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+}
 
   &__item,
   &__step {

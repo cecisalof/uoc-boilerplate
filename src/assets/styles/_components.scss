@@ -68,7 +68,7 @@
 
   &__item::before {
     content: "\f816";
-    font-family: "Font Awesome 6 Free";
+    font-family: $font-family-icons;
     font-weight: 600;
     color: $color-secondary;
     margin-right: 0.5rem; /* Espacio entre el ícono y el texto */

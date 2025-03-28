@@ -1,13 +1,13 @@
 /*------------------------------------*\
-  # COMPONENTS
+  # COMPONENTS: Elementos específicos de la UI con estilos visuales.
 \*------------------------------------*/
+
 .recipe {
   @include border-glow();
   border-radius: 20px;
   padding: 16px;
   transition: transform 0.3s ease;
   width: 100%;
-  /* Mobile First */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,17 +32,26 @@
     width: 100%;
     text-align: left;
     padding: 0.5rem;
-  }
 
-  &__content--intro {
-    font-family: $font-family-serif;
+    &--intro {
+      font-family: $font-family-serif;
+      font-weight: 300;
+    }
+
+    &--ingredients {
+      font-family: $font-family-serif;
+    }
+
+    &--steps {
+      margin: 1.5rem 0;
+    }
   }
 
   &__title {
     margin-bottom: 0.5rem;
   }
 
-  &__title--subtitle {
+  &__subtitle {
     font-size: 1.125rem;
     color: $color-secondary;
     font-family: $font-family-serif;
@@ -50,20 +59,18 @@
     padding: 0.5rem;
   }
 
-  &__content--steps {
-    margin: 1.5rem 0;
-  }
-
-  &__list,
-  &__steps {
+  &__list {
+    list-style: none;
+    /* Quita los bullets predeterminados */
+    padding-left: 0;
     font-family: $font-family-serif;
     font-size: var(--font-size-base);
     font-weight: 300;
   }
 
-  &__list {
-    list-style: none; /* Quita los bullets predeterminados */
-    padding-left: 0;
+  &__item,
+  &__step {
+    margin: 0.5rem;
   }
 
   &__item::before {
@@ -71,19 +78,21 @@
     font-family: $font-family-icons;
     font-weight: 600;
     color: $color-secondary;
-    margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
-}
-
-  &__item,
-  &__step {
-    margin: 0.5rem;
+    margin-right: 0.5rem;
+    /* Espacio entre el ícono y el texto */
   }
 
-  &__content--steps__images {
+  &__steps {
+    font-family: $font-family-serif;
+    font-size: var(--font-size-base);
+    font-weight: 300;
+  }
+  
+  &__steps-images {
     display: flex;
   }
 
-  &__steps__images {
+  &__steps-image {
     width: 100%;
   }
 
@@ -130,26 +139,26 @@
         "img-sauce   img-chilaquiles";
       gap: 1.5rem;
 
-      &__images--saouce {
+      &__images--sauce {
         grid-area: img-sauce;
       }
 
       &__images--chilaquiles {
-        grid-area: img-chilaquilas;
+        grid-area: img-chilaquiles;
       }
+    }
 
-      &__title {
-        grid-area: title;
-        text-align: center;
-      }
+    &__steps-title {
+      grid-area: title;
+      text-align: center;
+    }
 
-      &__sauce {
-        grid-area: sauce;
-      }
+    &__steps-sauce {
+      grid-area: sauce;
+    }
 
-      &__chilaquiles {
-        grid-area: chilaquiles;
-      }
+    &__steps-chilaquiles {
+      grid-area: chilaquiles;
     }
   }
 

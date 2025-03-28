@@ -1,17 +1,6 @@
 /*------------------------------------*\
-  # TOOLS (Mixins)
+  # TOOLS: Mixins y funciones
 \*------------------------------------*/
-
-// @mixin button-styles($color, $bg-color) {
-//   display: inline-block;
-//   padding: 10px 15px;
-//   background-color: $bg-color;
-//   color: $color;
-//   border: none;
-//   border-radius: 4px;
-//   text-align: center;
-//   cursor: pointer;
-// }
 
 @mixin neon-shadow($color: $color-primary) {
   text-shadow: 0 0 10px $color, 0 0 20px $color;
@@ -20,4 +9,9 @@
 @mixin border-glow($color: $color-border) {
   border: 2px solid $color;
   box-shadow: 0 0 15px $color, 0 0 30px $color inset;
+}
+
+// Función para ajustar opacidad
+@function adjust-opacity($color, $opacity) {
+  @return rgba($color, $opacity);
 }
